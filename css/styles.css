@@ -1,0 +1,305 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Main Styling */
+
+html, 
+body {
+  font-family: 'Merriweather', serif;
+}
+
+.main-container {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+header, 
+section, 
+footer {
+  text-align: center;
+}
+
+h1, 
+h2, 
+h3, 
+legend {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+h1 {
+  padding: 20px 0 20px 0;
+  background-color: black;
+  color: #fff;
+}
+
+legend {
+  padding: 20px 0;
+}
+
+p {
+  font-size: 14px;
+}
+
+p, label, select {
+  color: darkgrey;
+}
+
+section {
+  width: 90%;
+  margin: 0 auto;
+}
+
+section h2 {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+section p {
+  line-height: 1em;
+  padding-bottom: 35px;
+}
+
+/* Form */
+form {
+  width: 90%;
+  margin: 0 auto;
+}
+
+fieldset {
+  border: none;
+}
+
+fieldset p {
+  padding: 15px 0;
+}
+
+label {
+  padding: 10px 0;
+}
+
+textarea {
+  margin-bottom: 15px;
+}
+
+.top-hr {
+  border-top: 5px solid black;
+  margin-bottom: 3px;
+}
+
+.btm-hr {
+  border-top: 2px solid black;
+}
+
+form p {
+  line-height: 1em;
+}
+
+input[type='text'], 
+input[type='email'], 
+input[type='tel'], 
+select, 
+textarea {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #F5F5F5;
+}
+
+input[type='text']:focus, 
+input[type='email']:focus, 
+input[type='tel']:focus, 
+select:focus, 
+textarea:focus {
+  background-color: #E8E8E8;
+}
+
+#zipcode {
+  width: 50%;
+}
+
+.form-example {
+  margin-bottom: 15px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  text-align: right;
+  color: darkgrey;
+  font-style: italic;
+  padding-right: 10px;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  text-align: right;
+  color: darkgrey;
+  font-style: italic;
+  padding-right: 10px;
+}
+
+.btn {
+  width: 100%;
+  display: inline-block;
+  font-size: 18px;
+  color: #fff;
+  background: #4ebbb5;
+  padding: 13px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: #D0D0D0;
+}
+
+/* Footer */
+footer {
+  font-style: italic;
+  padding: 20px;
+}
+
+/* CUSTOM CHECKBOX */
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding: 0 0 0 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #F5F5F5;
+  border-radius: 5px;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark-box {
+  background-color: #E8E8E8;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark-box {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark-box:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark-box:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark-box:after {
+  left: 6px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* CUSTOM RADIO BUTTON */
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #F5F5F5;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #E8E8E8;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 6px;
+	left: 6px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+/* Media Query 768+ px */
+@media screen and (min-width: 768px) {
+  .main-container {
+    max-width: 768px;
+  }
+
+  section, form {
+    width: 60%;
+  }
+
+  .form-example br {
+    display: none;
+  }
+
+  input[type='text'], 
+  input[type='email'], 
+  input[type='tel'], 
+  select, 
+  textarea {
+    width: 65%;
+  }
+
+  .form-example label {
+    display: inline-block;
+    width: 34%;
+  }
+}
